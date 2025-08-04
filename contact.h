@@ -14,6 +14,7 @@ enum Gender
 	secret
 };
 
+//改为带哨兵位的双向循环链表，加一个字段用来表示是不是哨兵节点
 struct Contact
 {
 	//错误示范
@@ -26,6 +27,7 @@ struct Contact
 
 	struct Contact* prior;
 	struct Contact* next;
+	int is_sentinel;
 };
 
 
